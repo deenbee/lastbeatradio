@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="Img">
+    <file>lastbeat.png</file>
+    <file>C:/Users/Danubio/Desktop/lastbeat.svg</file>
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>
