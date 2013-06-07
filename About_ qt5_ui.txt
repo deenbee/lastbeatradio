@@ -1,0 +1,30 @@
+Based in qt5 (ui)
+
+
+
+Need help to programming my new app.
+
+I make the graphic interface based in qt 5 but need programmers.
+My idea is inspired by Zara Radio for Windows
+Like to make a multiplataform support such: linux, mac & Windows
+100% open source
+Need support all audio formats (wav, aiff, flac, ogg, mp3 &amp; wma)
+All in one with equalizer integrated for the great master better sounds output.
+Available in two languages Spanish & English
+
+
+Necesito que alguien me ayude a programarlo y que tenga sus funciones
+
+Lo �nico que supe hacer es la interface gr�fica que esta basada en qt 5 (designer)
+Esta inspirado en Zara radio usado en windows
+La idea es que sea multiplataforma y que funcione en Linux, Mac y Windows
+100% de c�digo abierto
+Se necesita soporte para todos los formatos (wav, aiff, flac, ogg, mp3 &amp; wma)
+Todo en uno con ecualizador integrado y expansi�n de sonido est�reo con reveb
+Disponible en dos lenguajes espa�ol e ingl�s
+
+Ideas y funcionalidades por cumplir con el proyecto
+Eventos: Su funci�n es programar una serie de archivos de audio de corta reproducci�n por lo general como avisos comerciales, locuci�n de hora o aviso de estaci�n de radios. Estos mismos no cortan la reproducci�n en vivo de la canci�n solo tiene un lapso de espera programado hasta que termine la canci�n y luego salga el evento al aire y nuevamente volver a la lista de reproducci�n.
+En la casilla izquierda es solo tener un �rbol simple de nuestras unidades y carpetas
+En ca casilla derecha inferior es una lista de nuestras etiquetas que aun pueden ser personalizadas por el usuario como ejemplo: M�sica para los domingos, Lista de Pop/Rock, los rom�nticos de la ma�ana.
+En la parte inferior derecha el men� de Jingles que pueden ser hasta 9 jingles distintos personalizados se reproducen al presionar el numero de cada jinle.
