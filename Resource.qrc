@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="img">
+    <file>Icons/play.png</file>
+    <file>img/lastbeat.svg</file>
+  </qresource>
+</RCC>
