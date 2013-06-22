@@ -1,6 +1,102 @@
 <RCC>
-  <qresource prefix="img">
-    <file>Icons/play.png</file>
-    <file>img/lastbeat.svg</file>
-  </qresource>
+    <qresource prefix="/images">
+        <file>images/lastbeat.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>icons/64 bit.png</file>
+        <file>icons/address books.png</file>
+        <file>icons/advanced.png</file>
+        <file>icons/applications.png</file>
+        <file>icons/archive.png</file>
+        <file>icons/back_alt.png</file>
+        <file>icons/burn.png</file>
+        <file>icons/calculator.png</file>
+        <file>icons/cash.png</file>
+        <file>icons/color.png</file>
+        <file>icons/Computer On.png</file>
+        <file>icons/Computer.png</file>
+        <file>icons/copy doc.png</file>
+        <file>icons/Credit card.png</file>
+        <file>icons/delete archive.png</file>
+        <file>icons/Desktop 2.png</file>
+        <file>icons/down_alt.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/Ekisho Deep Ocean HD1.png</file>
+        <file>icons/exclamation.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/folder.png</file>
+        <file>icons/folder_smart.png</file>
+        <file>icons/forward all.png</file>
+        <file>icons/forward button white.png</file>
+        <file>icons/forward button.png</file>
+        <file>icons/forward.png</file>
+        <file>icons/forward_alt.png</file>
+        <file>icons/GeneralPreferences.png</file>
+        <file>icons/Globe.png</file>
+        <file>icons/Graphite Computer On.png</file>
+        <file>icons/Graphite Desktop.png</file>
+        <file>icons/Graphite Globe.png</file>
+        <file>icons/heineken.png</file>
+        <file>icons/help.png</file>
+        <file>icons/iChat.png</file>
+        <file>icons/info.png</file>
+        <file>icons/install.png</file>
+        <file>icons/intel 2.png</file>
+        <file>icons/intel.png</file>
+        <file>icons/iPhone.png</file>
+        <file>icons/keyboard.png</file>
+        <file>icons/library bookmarked.png</file>
+        <file>icons/lock.png</file>
+        <file>icons/minus white.png</file>
+        <file>icons/minus.png</file>
+        <file>icons/monitor.png</file>
+        <file>icons/moon 2.png</file>
+        <file>icons/moon 3.png</file>
+        <file>icons/movies alt.png</file>
+        <file>icons/movies.png</file>
+        <file>icons/music 2.png</file>
+        <file>icons/music.png</file>
+        <file>icons/new archive.png</file>
+        <file>icons/new doc.png</file>
+        <file>icons/new mail.png</file>
+        <file>icons/notebook.png</file>
+        <file>icons/open alt.png</file>
+        <file>icons/pause.png</file>
+        <file>icons/Picture Cast.png</file>
+        <file>icons/picture.png</file>
+        <file>icons/plus.png</file>
+        <file>icons/Podcast.png</file>
+        <file>icons/public.png</file>
+        <file>icons/record.png</file>
+        <file>icons/refresh.png</file>
+        <file>icons/remove.png</file>
+        <file>icons/rewind button white.png</file>
+        <file>icons/rewind button.png</file>
+        <file>icons/RSS.png</file>
+        <file>icons/RSS_alt.png</file>
+        <file>icons/search.png</file>
+        <file>icons/send.png</file>
+        <file>icons/server.png</file>
+        <file>icons/smiley sad.png</file>
+        <file>icons/smiley.png</file>
+        <file>icons/splash green.png</file>
+        <file>icons/star.png</file>
+        <file>icons/stop 2.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/stop_alt.png</file>
+        <file>icons/sun 2.png</file>
+        <file>icons/sun.png</file>
+        <file>icons/terminal.png</file>
+        <file>icons/trash full.png</file>
+        <file>icons/trash.png</file>
+        <file>icons/unarchive.png</file>
+        <file>icons/Universal.png</file>
+        <file>icons/unread mail.png</file>
+        <file>icons/up_alt.png</file>
+        <file>icons/user.png</file>
+        <file>icons/users.png</file>
+        <file>icons/window.png</file>
+        <file>icons/zoom in.png</file>
+        <file>icons/zoom out.png</file>
+    </qresource>
 </RCC>
