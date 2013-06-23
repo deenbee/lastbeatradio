@@ -19,6 +19,7 @@ public:
 public slots:
     void updateClockLabel(QString text_time);
     void directoryViewer();
+    void init();
     
 private:
     DigitalClock *clock;

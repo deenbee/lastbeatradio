@@ -90,19 +90,6 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_25">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>110</y>
-      <width>41</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;&lt;</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
@@ -135,19 +122,6 @@
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_26">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>110</y>
-      <width>41</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&gt;&gt;</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_5">
@@ -260,54 +234,6 @@
      <string>16k</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>100</y>
-      <width>111</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::NoFocus</enum>
-    </property>
-    <property name="acceptDrops">
-     <bool>false</bool>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/img/img/lastbeat.svg);
-</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_27">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>150</y>
-      <width>51</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>Time</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
@@ -398,22 +324,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Filter by tags</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>140</y>
-      <width>81</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/Img/lastbeat.png);</string>
-    </property>
-    <property name="text">
-     <string>Stop</string>
     </property>
    </widget>
    <widget class="QSlider" name="verticalSlider_10">
@@ -522,46 +432,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt; font-style:italic;&quot;&gt;Madonna vs PSY - for example song&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QLabel" name="label_clock">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>100</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Mukti Narrow</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(200, 25, 25);</string>
-    </property>
-    <property name="text">
-     <string>00:00:00</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_9">
-    <property name="geometry">
-     <rect>
-      <x>642</x>
-      <y>110</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>Stop after current</string>
-    </property>
    </widget>
    <widget class="QCheckBox" name="checkBox_4">
     <property name="geometry">
@@ -760,26 +630,6 @@ border-color: rgb(110, 53, 255);</string>
      <string>125</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>210</y>
-      <width>91</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>0:00:00</string>
-    </property>
-   </widget>
    <widget class="QSlider" name="verticalSlider_8">
     <property name="geometry">
      <rect>
@@ -831,34 +681,6 @@ border-color: rgb(110, 53, 255);</string>
     </property>
     <property name="text">
      <string>  Inputs</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>862</x>
-      <y>140</y>
-      <width>91</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>Play / Pause</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QProgressBar" name="progressBar_3">
@@ -1187,37 +1009,6 @@ border-color: rgb(110, 53, 255);</string>
      </iconset>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>150</y>
-      <width>121</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Total lenght</string>
-    </property>
-    <widget class="QLabel" name="label_31">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>10</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>00:06:10:0</string>
-     </property>
-    </widget>
-   </widget>
    <widget class="QPushButton" name="pushButton_7">
     <property name="geometry">
      <rect>
@@ -1456,39 +1247,6 @@ border-color: rgb(110, 53, 255);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_13">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>210</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>-3:50:00</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="horizontalSlider">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>210</y>
-      <width>341</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
@@ -1634,19 +1392,6 @@ border-color: rgb(110, 53, 255);</string>
     </property>
     <property name="text">
      <string>500</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>862</x>
-      <y>110</y>
-      <width>91</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Next</string>
     </property>
    </widget>
    <widget class="QSlider" name="horizontalSlider_2">
@@ -1881,34 +1626,243 @@ border-color: rgb(110, 53, 255);</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>110</y>
+      <width>231</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_date">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 170, 0);
+border-style: solid; 
+border-color:rgb(255, 170, 0);
+border-radius: 5px; 
+border-width: 2px;</string>
+       </property>
+       <property name="text">
+        <string>Lunes, 1 de enero de 2000</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_clock">
+       <property name="font">
+        <font>
+         <family>Mukti Narrow</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 170, 0);
+border-style: solid; 
+border-color:rgb(255, 170, 0);
+border-radius: 5px; 
+border-width: 2px;</string>
+       </property>
+       <property name="text">
+        <string>00:00:00</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>649</x>
+      <y>110</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Stop after current</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_26">
+       <property name="text">
+        <string>&gt;&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_25">
+       <property name="text">
+        <string>&lt;&lt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>150</y>
+      <width>301</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>Total lenght</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>00:06:10:0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/Img/lastbeat.png);</string>
+       </property>
+       <property name="text">
+        <string>Stop</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Play / Pause</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>210</y>
+      <width>631</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>0:00:00</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>-3:50:00</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <zorder>line_3</zorder>
    <zorder>label_9</zorder>
    <zorder>label_21</zorder>
    <zorder>line_2</zorder>
    <zorder>line</zorder>
-   <zorder>pushButton_25</zorder>
    <zorder>label_12</zorder>
    <zorder>verticalSlider_2</zorder>
-   <zorder>pushButton_26</zorder>
    <zorder>groupBox_5</zorder>
    <zorder>label_3</zorder>
    <zorder>verticalSlider_9</zorder>
    <zorder>checkBox_2</zorder>
    <zorder>label_5</zorder>
-   <zorder>widget</zorder>
-   <zorder>pushButton_27</zorder>
    <zorder>groupBox_4</zorder>
    <zorder>label_33</zorder>
    <zorder>checkBox_3</zorder>
    <zorder>label_32</zorder>
-   <zorder>pushButton_3</zorder>
    <zorder>verticalSlider_10</zorder>
    <zorder>verticalSlider_3</zorder>
    <zorder>progressBar_4</zorder>
    <zorder>checkBox_5</zorder>
    <zorder>groupBox</zorder>
-   <zorder>label_clock</zorder>
-   <zorder>pushButton_9</zorder>
    <zorder>checkBox_4</zorder>
    <zorder>dial</zorder>
    <zorder>pushButton_4</zorder>
@@ -1916,11 +1870,9 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>comboBox</zorder>
    <zorder>listView</zorder>
    <zorder>label_4</zorder>
-   <zorder>label_14</zorder>
    <zorder>verticalSlider_8</zorder>
    <zorder>pushButton_28</zorder>
    <zorder>label_19</zorder>
-   <zorder>pushButton</zorder>
    <zorder>progressBar_3</zorder>
    <zorder>checkBox_6</zorder>
    <zorder>label_7</zorder>
@@ -1937,14 +1889,11 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>label_23</zorder>
    <zorder>line_4</zorder>
    <zorder>pushButton_5</zorder>
-   <zorder>groupBox_3</zorder>
    <zorder>pushButton_7</zorder>
    <zorder>verticalSlider_4</zorder>
    <zorder>label</zorder>
    <zorder>groupBox_2</zorder>
    <zorder>progressBar_2</zorder>
-   <zorder>label_13</zorder>
-   <zorder>horizontalSlider</zorder>
    <zorder>label_8</zorder>
    <zorder>horizontalSlider_3</zorder>
    <zorder>label_24</zorder>
@@ -1953,7 +1902,6 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>toolButton_2</zorder>
    <zorder>verticalSlider</zorder>
    <zorder>label_27</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>horizontalSlider_2</zorder>
    <zorder>checkBox</zorder>
    <zorder>pushButton_6</zorder>
@@ -1964,6 +1912,10 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>verticalLayoutWidget</zorder>
    <zorder>verticalLayoutWidget_2</zorder>
    <zorder>verticalLayoutWidget_3</zorder>
+   <zorder>verticalLayoutWidget_4</zorder>
+   <zorder>horizontalLayoutWidget_2</zorder>
+   <zorder>horizontalLayoutWidget_3</zorder>
+   <zorder>horizontalLayoutWidget_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "QFileSystemModel"
 #include "QTreeWidget"
+#include <QDateTime>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,15 +10,26 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->showMaximized();
-    directoryViewer();
-
-    clock = new DigitalClock();
-    connect(clock,SIGNAL(updateTime(QString)),this,SLOT(updateClockLabel(QString)));
+    init();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::init(){
+
+    //get current date
+    QDate date = QDate::currentDate();
+    QString dateString = date.toString("dddd, d 'de' MMMM 'de' yyyy");
+    ui->label_date->setText(dateString);
+
+    //get current time and clock start
+    clock = new DigitalClock();
+    connect(clock,SIGNAL(updateTime(QString)),this,SLOT(updateClockLabel(QString)));
+
+    directoryViewer();
 }
 
 void MainWindow::updateClockLabel(QString text_time){
