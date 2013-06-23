@@ -18,10 +18,12 @@ public:
 
 public slots:
     void updateClockLabel(QString text_time);
+    void directoryViewer();
     
 private:
     DigitalClock *clock;
     Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H
