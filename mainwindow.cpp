@@ -6,6 +6,7 @@
 #include "QDebug"
 #include "QFileDialog"
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -104,6 +105,7 @@ void MainWindow::on_pushButton_Stop_clicked()
 void MainWindow::on_pushButton_Play_toggled(bool checked)
 {
     if(checked){
+        audioplayer.setVolume(ui->dial_volume->value());
         audioplayer.play();
     }
     else{
@@ -155,4 +157,9 @@ void MainWindow::on_pushButton_NextTrack_clicked()
 void MainWindow::on_pushButton_PreviousTrack_clicked()
 {
     audioplayer.playlist()->previous();
+}
+
+void MainWindow::on_dial_volume_valueChanged(int value)
+{
+    audioplayer.setVolume(value);
 }

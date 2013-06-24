@@ -25,6 +25,7 @@ public slots:
     void init();
 
 private slots:
+    void on_dial_volume_valueChanged(int value);
     void on_pushButton_AddFile_clicked();
     void on_pushButton_NextTrack_clicked();
     void on_pushButton_PreviousTrack_clicked();

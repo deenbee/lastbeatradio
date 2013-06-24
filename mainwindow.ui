@@ -29,26 +29,6 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QLabel" name="label_9">
-    <property name="geometry">
-     <rect>
-      <x>1250</x>
-      <y>80</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Level</string>
-    </property>
-   </widget>
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
@@ -358,29 +338,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="checked">
      <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QDial" name="dial">
-    <property name="geometry">
-     <rect>
-      <x>1200</x>
-      <y>90</y>
-      <width>141</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(79, 223, 255);
-border-color: rgb(110, 53, 255);</string>
-    </property>
-    <property name="maximum">
-     <number>150</number>
-    </property>
-    <property name="value">
-     <number>99</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <widget class="Line" name="line_3">
@@ -851,25 +808,6 @@ border-color: rgb(110, 53, 255);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>1240</x>
-      <y>230</y>
-      <width>57</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string> Master</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
@@ -1298,7 +1236,11 @@ border-color: rgb(110, 53, 255);</string>
       </widget>
      </item>
      <item>
-      <widget class="QTreeView" name="treeView_directoryviewer"/>
+      <widget class="QTreeView" name="treeView_directoryviewer">
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -1639,7 +1581,14 @@ border-width: 2px;</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_6">
      <item>
-      <widget class="QListWidget" name="listWidget"/>
+      <widget class="QListWidget" name="listWidget">
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DropOnly</enum>
+       </property>
+      </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -1729,8 +1678,87 @@ border-width: 2px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>80</y>
+      <width>111</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Level</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDial" name="dial_volume">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(79, 223, 255);
+border-color: rgb(110, 53, 255);</string>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>50</number>
+       </property>
+       <property name="tracking">
+        <bool>true</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="invertedControls">
+        <bool>false</bool>
+       </property>
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="notchTarget">
+        <double>9.699999999999999</double>
+       </property>
+       <property name="notchesVisible">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string> Master</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <zorder>line_3</zorder>
-   <zorder>label_9</zorder>
    <zorder>line_2</zorder>
    <zorder>line</zorder>
    <zorder>verticalSlider_2</zorder>
@@ -1747,7 +1775,6 @@ border-width: 2px;</string>
    <zorder>checkBox_5</zorder>
    <zorder>groupBox</zorder>
    <zorder>checkBox_4</zorder>
-   <zorder>dial</zorder>
    <zorder>toolButton_3</zorder>
    <zorder>comboBox</zorder>
    <zorder>label_4</zorder>
@@ -1770,7 +1797,6 @@ border-width: 2px;</string>
    <zorder>label_23</zorder>
    <zorder>line_4</zorder>
    <zorder>verticalSlider_4</zorder>
-   <zorder>label</zorder>
    <zorder>groupBox_2</zorder>
    <zorder>progressBar_2</zorder>
    <zorder>label_8</zorder>
@@ -1792,6 +1818,7 @@ border-width: 2px;</string>
    <zorder>horizontalLayoutWidget_3</zorder>
    <zorder>horizontalLayoutWidget_4</zorder>
    <zorder>verticalLayoutWidget_5</zorder>
+   <zorder>verticalLayoutWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
