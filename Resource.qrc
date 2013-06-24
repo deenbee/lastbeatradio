@@ -98,5 +98,6 @@
         <file>icons/window.png</file>
         <file>icons/zoom in.png</file>
         <file>icons/zoom out.png</file>
+        <file>icons/play-pause-resume.png</file>
     </qresource>
 </RCC>
