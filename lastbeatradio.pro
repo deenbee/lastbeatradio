@@ -23,5 +23,11 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
+INCLUDEPATH += C:\Qt\taglib-1.8
+INCLUDEPATH += C:\Qt\taglib-1.8\taglib\toolkit
+INCLUDEPATH += C:\Qt\taglib-1.8\taglib
+
+LIBS += C:\Qt\taglib-1.8\taglib-release\libtaglib.a
+
 RESOURCES += \
     resource.qrc
