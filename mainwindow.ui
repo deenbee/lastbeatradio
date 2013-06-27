@@ -1379,7 +1379,7 @@ border-width: 2px;</string>
       <x>650</x>
       <y>110</y>
       <width>301</width>
-      <height>51</height>
+      <height>56</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1394,25 +1394,50 @@ border-width: 2px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QGroupBox" name="groupBox_3">
-       <property name="title">
-        <string>Total lenght</string>
-       </property>
-       <layout class="QFormLayout" name="formLayout">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_31">
-          <property name="font">
-           <font>
-            <pointsize>8</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>00:06:10:0</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(57, 143, 255);
+color: rgb(255, 255, 255);
+border-style: solid; 
+border-color:  rgb(57, 143, 255);
+border-radius: 5px; 
+border-width: 2px;</string>
+         </property>
+         <property name="text">
+          <string>Total lenght</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_totallenght">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 170, 0);
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>00:00:00</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
@@ -1489,7 +1514,7 @@ border-width: 2px;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">alternate-background-color: rgb(0, 170, 0);</string>
        </property>
        <property name="text">
         <string/>
@@ -1783,19 +1808,6 @@ border-color: rgb(110, 53, 255);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_ReadMetadata">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>90</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <zorder>line_3</zorder>
    <zorder>line_2</zorder>
    <zorder>line</zorder>
@@ -1857,7 +1869,6 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>horizontalLayoutWidget_4</zorder>
    <zorder>verticalLayoutWidget_5</zorder>
    <zorder>verticalLayoutWidget</zorder>
-   <zorder>pushButton_ReadMetadata</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

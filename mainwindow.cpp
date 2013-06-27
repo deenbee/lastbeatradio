@@ -69,39 +69,29 @@ void MainWindow::on_pushButton_AddFile_clicked()
     QMediaResource mediaresource;
 
     if(playlist_names.empty()){
-        playlist_names = QFileDialog::getOpenFileNames(this, tr("Selecciona los archivos de audio"),QDir::rootPath(),"Multimedia (*.mp3 *.wav *.aiff *.flac *.ogg *.wma)");
+        playlist_names = QFileDialog::getOpenFileNames(this, tr("Audio"),QDir::rootPath(),"Audio (*.mp3 *.wav *.aiff *.flac *.ogg *.wma)");
         for (int i = 0; i < playlist_names.size(); ++i){
             QString file = playlist_names.at(i);
             mediaresource = QMediaResource(QUrl(file));
             playlist->addMedia(QUrl(file));
 
-            QTreeWidgetItem *trackItem = new QTreeWidgetItem(ui->treeWidget_tracks);
-            trackItem->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));
-            trackItem->setText(1, file.remove(0,file.lastIndexOf("/")+1));
-            trackItem->setText(2, tr("Artist Name"));
-            trackItem->setText(3, tr("Duration"));
-            trackItem->setText(4, file.remove(0,file.lastIndexOf(".")+1));
+            get_audio_metadata(file, i);
         }
     }
     else{
-        QStringList aux = QFileDialog::getOpenFileNames(this, tr("Selecciona los archivos de audio"),QDir::rootPath(),"Multimedia (*.mp3 *.wav *.aiff *.flac *.ogg *.wma))");
+        QStringList aux = QFileDialog::getOpenFileNames(this, tr("Audio"),QDir::rootPath(),"Audio (*.mp3 *.wav *.aiff *.flac *.ogg *.wma))");
         int prev_numtracks = playlist_names.count();
         playlist_names = playlist_names+aux;
         for (int i = 0; i < aux.size(); ++i){
             QString file = aux.at(i);
             playlist->addMedia(QUrl(file));
-
-            QTreeWidgetItem *trackItem = new QTreeWidgetItem(ui->treeWidget_tracks);
-            trackItem->setText(0, QString("%1").arg(i+prev_numtracks, 3, 10, QLatin1Char('0')));
-            trackItem->setText(1, file.remove(0,file.lastIndexOf("/")+1));
-            trackItem->setText(2, tr("Artist Name"));
-            trackItem->setText(3, tr("Duration"));
-            trackItem->setText(4, file.remove(0,file.lastIndexOf(".")+1));
+            get_audio_metadata(file, i+prev_numtracks);
         }
     }
 
     playlist->setCurrentIndex(1);
     audioplayer.setPlaylist(playlist);
+    calculate_total_length();
 }
 
 void MainWindow::on_pushButton_RemoveFile_clicked()
@@ -110,12 +100,14 @@ void MainWindow::on_pushButton_RemoveFile_clicked()
         playlist_names.removeAt(ui->treeWidget_tracks->currentIndex().row());
         playlist->removeMedia(ui->treeWidget_tracks->currentIndex().row());
         delete ui->treeWidget_tracks->currentItem();
-    }
-    audioplayer.setPlaylist(playlist);
 
-    for (int i = ui->treeWidget_tracks->currentIndex().row(); i<playlist_names.count();i++){
-        ui->treeWidget_tracks->topLevelItem(i)->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));
-    }
+        for (int i = ui->treeWidget_tracks->currentIndex().row(); i<playlist_names.count();i++){
+            ui->treeWidget_tracks->topLevelItem(i)->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));
+        }
+
+        audioplayer.setPlaylist(playlist);
+        calculate_total_length();
+    }   
 }
 
 void MainWindow::on_pushButton_Stop_clicked()
@@ -191,4 +183,52 @@ void MainWindow::on_dial_volume_valueChanged(int value)
 void MainWindow::on_actionQuit_triggered()
 {
     this->close();
+}
+
+void MainWindow::get_audio_metadata(QString filename, int i)
+{
+    TagLib::MPEG::File file(filename.toStdString().c_str());
+    TagLib::ID3v2::Tag *tag = file.ID3v2Tag();
+
+    TagLib::FileName fn(filename.toStdString().c_str());
+    TagLib::FileRef fr(fn, true, TagLib::AudioProperties::Accurate);
+
+    QTreeWidgetItem *trackItem = new QTreeWidgetItem(ui->treeWidget_tracks);
+    trackItem->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));   //Position
+    trackItem->setText(1, filename.remove(0,filename.lastIndexOf("/")+1));  //Title
+    trackItem->setText(2, QString::fromStdString(tag->artist().to8Bit()));  //Artist Name
+    trackItem->setText(3, convert_time(fr.audioProperties()->length()));    //Duration
+    trackItem->setText(4, filename.remove(0,filename.lastIndexOf(".")+1));  //Format
+}
+
+void MainWindow::calculate_total_length(){
+    int time = 0;
+
+    for(int i =0; i<playlist_names.count(); i++){
+        TagLib::FileName fn(playlist_names.at(i).toStdString().c_str());
+        TagLib::FileRef fr(fn, true, TagLib::AudioProperties::Accurate);
+        time += fr.audioProperties()->length();
+    }
+
+    ui->label_totallength->setText(convert_time(time));
+}
+
+QString MainWindow::convert_time(qint64 secs){
+    QString formattedTime;
+
+    int hours, minutes, seconds;
+
+    seconds = secs;
+    hours = seconds / (60*60);
+    seconds %= 60*60;
+    minutes = seconds / 60;
+    seconds %= 60;
+
+    formattedTime.append(QString("%1").arg(hours, 2, 10, QLatin1Char('0')) + ":" +
+                         QString( "%1" ).arg(minutes, 2, 10, QLatin1Char('0')) + ":" +
+                         QString( "%1" ).arg(seconds, 2, 10, QLatin1Char('0')));
+    //QString("%1").arg(hours, 2, 10, QLatin1Char('0')) + ":" +
+    //QString( "%1" ).arg(milliseconds, 3, 10, QLatin1Char('0'))
+
+    return formattedTime;
 }

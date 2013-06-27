@@ -7,6 +7,13 @@
 #include "digitalclock.h"
 #include "audioplayer.h"
 
+#include "tag.h"
+#include "taglib/mpeg/mpegfile.h"
+#include "tbytevectorstream.h"
+#include "taglib/mpeg/id3v2/id3v2tag.h"
+#include "taglib/mpeg/id3v2/id3v2framefactory.h"
+#include "taglib/fileref.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -36,6 +43,10 @@ private slots:
     void on_pushButton_Stop_clicked();
     void positionChanged(qint64 time);
     void currentMediaChanged(qint64 duration);
+
+    void get_audio_metadata(QString filename, int i);
+    void calculate_total_length();
+    QString convert_time(qint64 secs);
 
 private:
     DigitalClock *clock;
