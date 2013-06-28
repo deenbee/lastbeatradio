@@ -1419,7 +1419,7 @@ border-width: 2px;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_totallenght">
+        <widget class="QLabel" name="label_totallength">
          <property name="font">
           <font>
            <pointsize>12</pointsize>

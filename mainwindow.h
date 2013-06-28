@@ -42,19 +42,20 @@ private slots:
     void on_pushButton_RemoveFile_clicked();
     void on_pushButton_Stop_clicked();
     void positionChanged(qint64 time);
-    void currentMediaChanged(qint64 duration);
+    void currentMediaChanged(int index);
 
     void get_audio_metadata(QString filename, int i);
     void calculate_total_length();
     QString convert_time(qint64 secs);
+    void clear_mark_tracks();
 
 private:
     DigitalClock *clock;
     Ui::MainWindow *ui;
     AudioPlayer audioplayer;
 
-    QMediaPlaylist *playlist;
     QStringList playlist_names;
+    bool go_up;
 
 };
 
