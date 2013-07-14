@@ -9,12 +9,11 @@ Audio Player for Radio Stations (Broadcasting), inspired in Zara Radio but Lastb
 * Lastbeat radio is best clone of Zara radio
 * New functions and integrated effects/sound procesing
 * Best mastering in the outputs & external midi controls support.
+* Work on? (like Linux, Windows & Mac / 100% Open Source)
 
 The best open source choise for your Radio Stations with freedom.
 
-=======================================================
-Work on? (like Linux, Windows & Mac / 100% Open Source)
-=======================================================
+
 
 I create my model using "qt Designer"
 
