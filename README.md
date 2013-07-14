@@ -12,7 +12,7 @@ Audio Player for Radio Stations (Broadcasting), inspired in Zara Radio but Lastb
 
 The best open source choise for your Radio Stations with freedom.
 
-
+Here a short demo video: http://www.youtube.com/watch?v=FP3af9S0c-Y
 
 I create my model using "qt Designer"
 
@@ -21,3 +21,4 @@ We need ideas, we need work
 ===========================
 
 THANKS AND SUPPORT IT!
+
