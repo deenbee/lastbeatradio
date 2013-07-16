@@ -9,6 +9,7 @@ Audio Player for Radio Stations (Broadcasting), inspired in Zara Radio but Lastb
 * New functions and integrated effects/sound processing
 * Best mastering in the outputs & external midi controls support.
 * Work on? (like Linux, Windows & Mac / 100% Open Source)
+* Like support formats such: Wav, Aiff, Ape, Flac, Mp3, Wma, Acc, Ogg, Lst, M3u, Cue
 
 The best open source choise for your Radio Stations with freedom.
 
