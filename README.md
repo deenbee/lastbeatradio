@@ -17,6 +17,11 @@ Here a short demo video: http://www.youtube.com/watch?v=FP3af9S0c-Y
 
 I create my model using "qt Designer"
 
+Special Thanks to:
+
+Albert Cámara: https://github.com/acamara
+
+
 ===========================
 We need ideas, we need work
 ===========================
