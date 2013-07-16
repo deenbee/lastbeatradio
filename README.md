@@ -15,8 +15,7 @@ The best open source choise for your Radio Stations with freedom.
 
 Here a short demo video: http://www.youtube.com/watch?v=FP3af9S0c-Y
 
-I create my model using "qt Designer"
-
+Original project started by: Danubio Rodriguez
 
 Special Thanks to:
 ==================
