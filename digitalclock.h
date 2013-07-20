@@ -1,6 +1,7 @@
 #ifndef DIGITALCLOCK_H
 #define DIGITALCLOCK_H
-#include "QObject"
+
+#include <QObject>
 
 class DigitalClock: public QObject
 {

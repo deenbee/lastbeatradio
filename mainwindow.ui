@@ -1222,9 +1222,9 @@ p, li { white-space: pre-wrap; }
       <height>351</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout_browsemusic">
      <item>
-      <widget class="QLabel" name="label_11">
+      <widget class="QLabel" name="label_browsemusic">
        <property name="font">
         <font>
          <pointsize>9</pointsize>
@@ -1232,19 +1232,6 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="text">
         <string>Browse music</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTreeView" name="treeView_directoryviewer">
-       <property name="dragEnabled">
-        <bool>true</bool>
-       </property>
-       <property name="selectionMode">
-        <enum>QAbstractItemView::ExtendedSelection</enum>
-       </property>
-       <property name="selectionBehavior">
-        <enum>QAbstractItemView::SelectItems</enum>
        </property>
       </widget>
      </item>
@@ -1607,126 +1594,10 @@ color: rgb(255, 255, 255);</string>
       <x>320</x>
       <y>250</y>
       <width>631</width>
-      <height>411</height>
+      <height>371</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_6">
-     <item>
-      <widget class="QTreeWidget" name="treeWidget_tracks">
-       <column>
-        <property name="text">
-         <string>Position</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Title</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Artist Name</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Duration</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Format</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QPushButton" name="pushButton_AddFile">
-         <property name="text">
-          <string>Add</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icons/icons/music 2.png</normaloff>:/icons/icons/music 2.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_RemoveFile">
-         <property name="text">
-          <string>Remove</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="checkBox">
-         <property name="text">
-          <string>hide played files</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_12">
-         <property name="text">
-          <string>Play Mode:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBox_4">
-         <item>
-          <property name="text">
-           <string>Normal</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Repeat all</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Shuffle</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="text">
-          <string>Open</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>Icons/new doc.png</normalon>
-          </iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Save..</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>Icons/edit.png</normalon>
-          </iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <layout class="QVBoxLayout" name="verticalLayout_6"/>
    </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
@@ -1808,7 +1679,100 @@ border-color: rgb(110, 53, 255);</string>
      </item>
     </layout>
    </widget>
-   <zorder>line_3</zorder>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>630</y>
+      <width>631</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QPushButton" name="pushButton_AddFile">
+       <property name="text">
+        <string>Add</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/music 2.png</normaloff>:/icons/icons/music 2.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_RemoveFile">
+       <property name="text">
+        <string>Remove</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>hide played files</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Play Mode:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_4">
+       <item>
+        <property name="text">
+         <string>Normal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Repeat all</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Shuffle</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>Open</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>Icons/new doc.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>Save..</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>Icons/edit.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <zorder>line_2</zorder>
    <zorder>line</zorder>
    <zorder>verticalSlider_2</zorder>
@@ -1869,6 +1833,8 @@ border-color: rgb(110, 53, 255);</string>
    <zorder>horizontalLayoutWidget_4</zorder>
    <zorder>verticalLayoutWidget_5</zorder>
    <zorder>verticalLayoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>line_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

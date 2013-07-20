@@ -6,6 +6,8 @@
 #include <QTreeWidgetItem>
 #include "digitalclock.h"
 #include "audioplayer.h"
+#include "tracklistwidget.h"
+#include "browseview.h"
 
 #include "tag.h"
 #include "taglib/mpeg/mpegfile.h"
@@ -29,8 +31,8 @@ public:
 public slots:
     void createActions();
     void updateClockLabel(QString text_time);
-    void directoryViewer();
     void init();
+    void add_track(QString filename);
 
 private slots:
     void on_actionQuit_triggered();
@@ -53,10 +55,11 @@ private:
     DigitalClock *clock;
     Ui::MainWindow *ui;
     AudioPlayer audioplayer;
+    TrackListWidget *treeWidget_tracks;
+    BrowseView *browseview;
 
     QStringList playlist_names;
     bool go_up;
-
 };
 
 #endif // MAINWINDOW_H

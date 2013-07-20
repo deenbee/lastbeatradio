@@ -15,11 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     digitalclock.cpp \
-    audioplayer.cpp
+    audioplayer.cpp \
+    tracklistwidget.cpp \
+    browseview.cpp
 
 HEADERS  += mainwindow.h \
     digitalclock.h \
-    audioplayer.h
+    audioplayer.h \
+    tracklistwidget.h \
+    browseview.h
 
 FORMS    += mainwindow.ui
 
