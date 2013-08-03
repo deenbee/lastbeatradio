@@ -1444,7 +1444,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/rewind button white.png</normaloff>:/icons/icons/rewind button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1461,7 +1461,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/forward button white.png</normaloff>:/icons/icons/forward button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1481,7 +1481,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/stop 2.png</normaloff>:/icons/icons/stop 2.png</iconset>
        </property>
        <property name="iconSize">
@@ -1507,7 +1507,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/play-pause-resume.png</normaloff>:/icons/icons/play-pause-resume.png</iconset>
        </property>
        <property name="iconSize">
@@ -1695,7 +1695,7 @@ border-color: rgb(110, 53, 255);</string>
         <string>Add</string>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/music 2.png</normaloff>:/icons/icons/music 2.png</iconset>
        </property>
       </widget>
@@ -1706,7 +1706,7 @@ border-color: rgb(110, 53, 255);</string>
         <string>Remove</string>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
        </property>
       </widget>
@@ -1953,7 +1953,7 @@ border-color: rgb(110, 53, 255);</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/new doc.png</normaloff>:/icons/icons/new doc.png</iconset>
    </property>
    <property name="text">
@@ -1962,7 +1962,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/open alt.png</normaloff>:/icons/icons/open alt.png</iconset>
    </property>
    <property name="text">
@@ -1971,7 +1971,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/archive.png</normaloff>:/icons/icons/archive.png</iconset>
    </property>
    <property name="text">
@@ -1990,7 +1990,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionQuit">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/remove.png</normaloff>:/icons/icons/remove.png</iconset>
    </property>
    <property name="text">
