@@ -35,8 +35,8 @@ void MainWindow::init(){
     AudioPlayer audioplayer;
     QStringList playlist_names;
 
-    treeWidget_tracks = new TrackListWidget(ui->verticalLayoutWidget_5);
-    ui->verticalLayout_6->addWidget(treeWidget_tracks);
+    treeView_tracks = new TrackListView(ui->verticalLayoutWidget_5);
+    ui->verticalLayout_6->addWidget(treeView_tracks);
 
     browseview = new BrowseView(this);
     ui->verticalLayout_browsemusic->addWidget(browseview);
@@ -48,7 +48,7 @@ void MainWindow::createActions()
 {
     connect(&audioplayer,SIGNAL(positionChanged(qint64)), this, SLOT(positionChanged(qint64)));
     connect(&audioplayer,SIGNAL(update_current_track(int)), this, SLOT(currentMediaChanged(int)));
-    connect(treeWidget_tracks,SIGNAL(add_track(QString)),this, SLOT(add_track(QString)));
+    connect(treeView_tracks,SIGNAL(add_drop_track(QString)),this, SLOT(add_drop_track(QString)));
 }
 
 void MainWindow::updateClockLabel(QString text_time)
@@ -67,8 +67,7 @@ void MainWindow::on_pushButton_AddFile_clicked()
             QString file = playlist_names.at(i);
             mediaresource = QMediaResource(QUrl(file));
             audioplayer.addMedia(file);
-
-            get_audio_metadata(file, i);
+            treeView_tracks->add_track(file,i);
         }
         audioplayer.setCurrentIndex(0);
     }
@@ -79,30 +78,24 @@ void MainWindow::on_pushButton_AddFile_clicked()
         for (int i = 0; i < aux.size(); ++i){
             QString file = aux.at(i);
             audioplayer.addMedia(file);
-            get_audio_metadata(file, i+prev_numtracks);
+            treeView_tracks->add_track(file,i+prev_numtracks);
         }
     }
 
     calculate_total_length();
 }
 
-void MainWindow::add_track(QString filename){
-    int prev_numtracks = playlist_names.count();
+void MainWindow::add_drop_track(QString filename){
     playlist_names.append(filename);
     audioplayer.addMedia(filename);
-    get_audio_metadata(filename, prev_numtracks);
 }
 
 void MainWindow::on_pushButton_RemoveFile_clicked()
 {
     if(!playlist_names.empty()){
-        playlist_names.removeAt(treeWidget_tracks->currentIndex().row());
-        audioplayer.removeMedia(treeWidget_tracks->currentIndex().row());
-        delete treeWidget_tracks->currentItem();
-
-        for (int i = treeWidget_tracks->currentIndex().row(); i<playlist_names.count();i++){
-            treeWidget_tracks->topLevelItem(i)->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));
-        }
+        playlist_names.removeAt(treeView_tracks->currentIndex().row());
+        audioplayer.removeMedia(treeView_tracks->currentIndex().row());
+        treeView_tracks->remove_track();
         calculate_total_length();
     }   
 }
@@ -139,20 +132,20 @@ void MainWindow::currentMediaChanged(int index){
         ui->horizontalSlider_audio_time_position->setMaximum(audioplayer.getDuration());
 
         if(index>0){
-            treeWidget_tracks->topLevelItem(index-1)->setBackgroundColor(0,Qt::white);
+            treeView_tracks->changeRowColor(index-1,Qt::white);
         }
 
         if(go_up & index+2 < playlist_names.count()){
             go_up = false;
-            treeWidget_tracks->topLevelItem(index+2)->setBackgroundColor(0,Qt::white);
+            treeView_tracks->changeRowColor(index+2,Qt::white);
         }
 
-        treeWidget_tracks->topLevelItem(index)->setBackgroundColor(0,Qt::green);
+        treeView_tracks->changeRowColor(index,Qt::green);
         ui->textBrowser_playing_track->setText(track.remove(0,track.lastIndexOf("/")+1));
 
         if(audioplayer.getNextIndex()!= -1){
             track = playlist_names.at(index+1);
-            treeWidget_tracks->topLevelItem(index+1)->setBackgroundColor(0,QColor(255,100,20));
+            treeView_tracks->changeRowColor(index+1,QColor(100,149,237));
             ui->textBrowser_next_track->setText(track.remove(0,track.lastIndexOf("/")+1));
         }
         else{
@@ -169,7 +162,7 @@ void MainWindow::currentMediaChanged(int index){
 
 void MainWindow::clear_mark_tracks(){
     for(int i=0; i<playlist_names.count();i++){
-        treeWidget_tracks->topLevelItem(i)->setBackgroundColor(0,Qt::white);
+        treeView_tracks->changeRowColor(i,Qt::white);
     }
 }
 
@@ -192,28 +185,6 @@ void MainWindow::on_dial_volume_valueChanged(int value)
 void MainWindow::on_actionQuit_triggered()
 {
     this->close();
-}
-
-void MainWindow::get_audio_metadata(QString filename, int i)
-{
-    #ifdef Q_OS_WIN
-            const wchar_t * encodedName = reinterpret_cast<const wchar_t*>(filename.utf16());
-    #else
-            const char * encodedName = QFile::encodeName(filename).constData();
-    #endif
-
-    TagLib::MPEG::File file(encodedName);
-    TagLib::ID3v2::Tag *tag = file.ID3v2Tag();
-
-    TagLib::FileRef fr(encodedName, true, TagLib::AudioProperties::Accurate);
-
-    QTreeWidgetItem *trackItem = new QTreeWidgetItem(treeWidget_tracks);
-    trackItem->setText(0, QString("%1").arg(i, 3, 10, QLatin1Char('0')));   //Position
-    trackItem->setText(1, filename.remove(0,filename.lastIndexOf("/")+1));  //Title
-    //trackItem->setText(1, QString::fromStdString(tag->title().to8Bit()));  //Title
-    trackItem->setText(2, QString::fromStdString(tag->artist().to8Bit()));  //Artist Name
-    trackItem->setText(3, convert_time(fr.audioProperties()->length()));    //Duration
-    trackItem->setText(4, filename.remove(0,filename.lastIndexOf(".")+1));  //Format
 }
 
 void MainWindow::calculate_total_length(){

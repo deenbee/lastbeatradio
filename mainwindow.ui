@@ -22,6 +22,10 @@
   <property name="windowTitle">
    <string>Lastbeat Radio</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/images/images/lastbeat.png</normaloff>:/images/images/lastbeat.png</iconset>
+  </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
@@ -1304,7 +1308,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>410</x>
       <y>110</y>
-      <width>231</width>
+      <width>236</width>
       <height>80</height>
      </rect>
     </property>
@@ -1325,7 +1329,7 @@ border-radius: 5px;
 border-width: 2px;</string>
        </property>
        <property name="text">
-        <string>Lunes, 1 de enero de 2000</string>
+        <string>Miércoles, 14 de agosto de 2013</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1444,7 +1448,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/rewind button white.png</normaloff>:/icons/icons/rewind button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1461,7 +1465,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/forward button white.png</normaloff>:/icons/icons/forward button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1481,7 +1485,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/stop 2.png</normaloff>:/icons/icons/stop 2.png</iconset>
        </property>
        <property name="iconSize">
@@ -1507,7 +1511,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/play-pause-resume.png</normaloff>:/icons/icons/play-pause-resume.png</iconset>
        </property>
        <property name="iconSize">
@@ -1695,7 +1699,7 @@ border-color: rgb(110, 53, 255);</string>
         <string>Add</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/music 2.png</normaloff>:/icons/icons/music 2.png</iconset>
        </property>
       </widget>
@@ -1706,7 +1710,7 @@ border-color: rgb(110, 53, 255);</string>
         <string>Remove</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="resource.qrc">
          <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
        </property>
       </widget>
@@ -1717,7 +1721,7 @@ border-color: rgb(110, 53, 255);</string>
         <string>hide played files</string>
        </property>
        <property name="checked">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -1953,7 +1957,7 @@ border-color: rgb(110, 53, 255);</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/icons/icons/new doc.png</normaloff>:/icons/icons/new doc.png</iconset>
    </property>
    <property name="text">
@@ -1962,7 +1966,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/icons/icons/open alt.png</normaloff>:/icons/icons/open alt.png</iconset>
    </property>
    <property name="text">
@@ -1971,7 +1975,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/icons/icons/archive.png</normaloff>:/icons/icons/archive.png</iconset>
    </property>
    <property name="text">
@@ -1990,7 +1994,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionQuit">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/icons/icons/remove.png</normaloff>:/icons/icons/remove.png</iconset>
    </property>
    <property name="text">

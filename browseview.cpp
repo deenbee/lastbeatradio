@@ -7,7 +7,7 @@
 BrowseView::BrowseView(QWidget *parent) :
     QTreeView(parent)
 {
-    setSelectionMode(QAbstractItemView::ExtendedSelection);
+    //setSelectionMode(QAbstractItemView::ExtendedSelection);
     setDragEnabled(true);
     setAcceptDrops(true);
     setDropIndicatorShown(true);

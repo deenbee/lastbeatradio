@@ -3,18 +3,10 @@
 
 #include <QMainWindow>
 #include <QMediaPlaylist>
-#include <QTreeWidgetItem>
 #include "digitalclock.h"
 #include "audioplayer.h"
-#include "tracklistwidget.h"
+#include "tracklistview.h"
 #include "browseview.h"
-
-#include "tag.h"
-#include "taglib/mpeg/mpegfile.h"
-#include "tbytevectorstream.h"
-#include "taglib/mpeg/id3v2/id3v2tag.h"
-#include "taglib/mpeg/id3v2/id3v2framefactory.h"
-#include "taglib/fileref.h"
 
 namespace Ui {
 class MainWindow;
@@ -32,7 +24,8 @@ public slots:
     void createActions();
     void updateClockLabel(QString text_time);
     void init();
-    void add_track(QString filename);
+    void add_drop_track(QString filename);
+
 
 private slots:
     void on_actionQuit_triggered();
@@ -45,17 +38,17 @@ private slots:
     void on_pushButton_Stop_clicked();
     void positionChanged(qint64 time);
     void currentMediaChanged(int index);
+    void clear_mark_tracks();
 
-    void get_audio_metadata(QString filename, int i);
     void calculate_total_length();
     QString convert_time(qint64 secs);
-    void clear_mark_tracks();
 
 private:
     DigitalClock *clock;
     Ui::MainWindow *ui;
     AudioPlayer audioplayer;
-    TrackListWidget *treeWidget_tracks;
+
+    TrackListView *treeView_tracks;
     BrowseView *browseview;
 
     QStringList playlist_names;

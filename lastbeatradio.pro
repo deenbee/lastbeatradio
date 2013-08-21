@@ -16,14 +16,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     digitalclock.cpp \
     audioplayer.cpp \
-    tracklistwidget.cpp \
-    browseview.cpp
+    browseview.cpp \
+    tracklistview.cpp
 
 HEADERS  += mainwindow.h \
     digitalclock.h \
     audioplayer.h \
-    tracklistwidget.h \
-    browseview.h
+    browseview.h \
+    tracklistview.h
 
 FORMS    += mainwindow.ui
 
