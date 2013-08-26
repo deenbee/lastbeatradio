@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     this->showMaximized();
     init();
     go_up = false;
+    stopaftercurrent = false;
+    total_length = 0;
 }
 
 MainWindow::~MainWindow()
@@ -120,44 +122,55 @@ void MainWindow::on_pushButton_Play_toggled(bool checked)
 }
 
 void MainWindow::positionChanged(qint64 time){
-    ui->horizontalSlider_audio_time_position->setValue(time);
+    ui->horizontalSlider_audio_track_position->setValue(time);
     ui->label_audio_time_position->setText(audioplayer.getPosition());
     ui->label_remain_duration->setText(audioplayer.getRemainingTime());
 }
 
 void MainWindow::currentMediaChanged(int index){
-    if(index > -1){
-        QString track = playlist_names.at(index);
-        ui->label_remain_duration->setText(audioplayer.getDuration_formated());
-        ui->horizontalSlider_audio_time_position->setMaximum(audioplayer.getDuration());
-
-        if(index>0){
-            treeView_tracks->changeRowColor(index-1,Qt::white);
-        }
-
-        if(go_up & index+2 < playlist_names.count()){
-            go_up = false;
-            treeView_tracks->changeRowColor(index+2,Qt::white);
-        }
-
-        treeView_tracks->changeRowColor(index,Qt::green);
-        ui->textBrowser_playing_track->setText(track.remove(0,track.lastIndexOf("/")+1));
-
-        if(audioplayer.getNextIndex()!= -1){
-            track = playlist_names.at(index+1);
-            treeView_tracks->changeRowColor(index+1,QColor(100,149,237));
-            ui->textBrowser_next_track->setText(track.remove(0,track.lastIndexOf("/")+1));
-        }
-        else{
-            ui->textBrowser_next_track->setText("");
-        }
+    if(stopaftercurrent){
+       on_pushButton_Stop_clicked();
+       ui->pushButton_stopaftercurrent->setChecked(false);
+       stopaftercurrent = false;
+       clear_mark_tracks();
     }
     else{
-        clear_mark_tracks();
-        ui->textBrowser_playing_track->setText("");
-        ui->pushButton_Play->setChecked(false);
-        audioplayer.stop();
+        if(index > -1){
+            QString track = playlist_names.at(index);
+            ui->label_remain_duration->setText(audioplayer.getDuration_formated());
+            ui->horizontalSlider_audio_track_position->setMaximum(audioplayer.getDuration());
+
+            if(index>0){
+                treeView_tracks->changeRowColor(index-1,Qt::white);
+            }
+
+            if(go_up & index+2 < playlist_names.count()){
+                go_up = false;
+                treeView_tracks->changeRowColor(index+2,Qt::white);
+            }
+
+            treeView_tracks->changeRowColor(index,Qt::green);
+            QString name = track.remove(0,track.lastIndexOf("/")+1);
+            ui->lineEdit_playing_track->setText(name.remove(track.lastIndexOf("."),track.size()));
+
+            if(audioplayer.getNextIndex()!= -1){
+                track = playlist_names.at(index+1);
+                treeView_tracks->changeRowColor(index+1,QColor(100,149,237));
+                QString name = track.remove(0,track.lastIndexOf("/")+1);
+                ui->lineEdit_next_track->setText(name.remove(track.lastIndexOf("."),track.size()));
+            }
+            else{
+                ui->lineEdit_next_track->setText("");
+            }
+        }
+        else{
+            clear_mark_tracks();
+            ui->lineEdit_playing_track->setText("");
+            ui->pushButton_Play->setChecked(false);
+            audioplayer.stop();
+        }
     }
+
 }
 
 void MainWindow::clear_mark_tracks(){
@@ -188,8 +201,6 @@ void MainWindow::on_actionQuit_triggered()
 }
 
 void MainWindow::calculate_total_length(){
-    int time = 0;
-
     for(int i =0; i<playlist_names.count(); i++){
         QString filename = playlist_names.at(i);
 
@@ -200,10 +211,9 @@ void MainWindow::calculate_total_length(){
         #endif
 
         TagLib::FileRef fr(encodedName, true, TagLib::AudioProperties::Accurate);
-        time += fr.audioProperties()->length();
+        total_length += fr.audioProperties()->length();
     }
-
-    ui->label_totallength->setText(convert_time(time));
+    ui->label_totallength->setText(convert_time(total_length));
 }
 
 QString MainWindow::convert_time(qint64 secs){
@@ -224,4 +234,14 @@ QString MainWindow::convert_time(qint64 secs){
     //QString( "%1" ).arg(milliseconds, 3, 10, QLatin1Char('0'))
 
     return formattedTime;
+}
+
+void MainWindow::on_horizontalSlider_audio_track_position_sliderMoved(int position)
+{
+    audioplayer.setPosition(position);
+}
+
+void MainWindow::on_pushButton_stopaftercurrent_toggled(bool checked)
+{
+    stopaftercurrent = checked;
 }

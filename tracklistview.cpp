@@ -62,7 +62,7 @@ void TrackListView::dropEvent(QDropEvent *event)
             if(check_is_audio(files.at(i))){
                  //qDebug()<<"Is audio";
                 emit add_drop_track(files.at(i));
-                add_track(files.at(i),i+model_tracks->rowCount());
+                add_track(files.at(i),model_tracks->rowCount());
             }
          }
          event->setDropAction(Qt::MoveAction);
@@ -97,7 +97,8 @@ void TrackListView::add_track(QString filename, int row){
     TagLib::FileRef fr(encodedName, true, TagLib::AudioProperties::Accurate);
 
     model_tracks->setItem(row, 0, new QStandardItem(QString("%1").arg(row, 3, 10, QLatin1Char('0'))));
-    model_tracks->setItem(row, 1, new QStandardItem(filename.remove(0,filename.lastIndexOf("/")+1)));
+    QString name = filename.remove(0,filename.lastIndexOf("/")+1);
+    model_tracks->setItem(row, 1, new QStandardItem(name.remove(filename.lastIndexOf("."),filename.size())));
     model_tracks->setItem(row, 2, new QStandardItem(QString::fromStdString(tag->artist().to8Bit())));
     model_tracks->setItem(row, 3, new QStandardItem(convert_time(fr.audioProperties()->length())));
     model_tracks->setItem(row, 4, new QStandardItem(filename.remove(0,filename.lastIndexOf(".")+1)));

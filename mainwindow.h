@@ -41,7 +41,12 @@ private slots:
     void clear_mark_tracks();
 
     void calculate_total_length();
+
     QString convert_time(qint64 secs);
+
+    void on_horizontalSlider_audio_track_position_sliderMoved(int position);
+
+    void on_pushButton_stopaftercurrent_toggled(bool checked);
 
 private:
     DigitalClock *clock;
@@ -53,6 +58,8 @@ private:
 
     QStringList playlist_names;
     bool go_up;
+    bool stopaftercurrent;
+    int total_length;
 };
 
 #endif // MAINWINDOW_H
