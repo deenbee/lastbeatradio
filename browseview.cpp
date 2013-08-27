@@ -12,6 +12,7 @@ BrowseView::BrowseView(QWidget *parent) :
     setAcceptDrops(true);
     setDropIndicatorShown(true);
     setDragDropMode(QAbstractItemView::InternalMove);
+    setMaximumWidth(500);
     viewport()->setAcceptDrops(true);
 
     model = new QFileSystemModel;

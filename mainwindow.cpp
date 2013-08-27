@@ -37,7 +37,7 @@ void MainWindow::init(){
     AudioPlayer audioplayer;
     QStringList playlist_names;
 
-    treeView_tracks = new TrackListView(ui->verticalLayoutWidget_5);
+    treeView_tracks = new TrackListView(this);
     ui->verticalLayout_6->addWidget(treeView_tracks);
 
     browseview = new BrowseView(this);
