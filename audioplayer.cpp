@@ -1,7 +1,7 @@
 #include <QtWidgets>
 #include <QMediaPlaylist>
 #include "audioplayer.h"
-#include "tag.h"
+#include "taglib/tag.h"
 #include "taglib/fileref.h"
 #include <QDebug>
 
