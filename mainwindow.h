@@ -7,12 +7,23 @@
 #include "digitalclock.h"
 #include "audioplayer.h"
 
+#ifdef Q_OS_WIN
 #include "tag.h"
 #include "taglib/mpeg/mpegfile.h"
 #include "tbytevectorstream.h"
 #include "taglib/mpeg/id3v2/id3v2tag.h"
 #include "taglib/mpeg/id3v2/id3v2framefactory.h"
 #include "taglib/fileref.h"
+#endif
+
+#ifdef Q_OS_LINUX
+#include "taglib/tag.h"
+#include "taglib/mpegfile.h"
+#include "taglib/tbytevectorstream.h"
+#include "taglib/id3v2tag.h"
+#include "taglib/id3v2framefactory.h"
+#include "taglib/fileref.h"
+#endif
 
 namespace Ui {
 class MainWindow;

@@ -178,8 +178,8 @@
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -319,8 +319,8 @@ p, li { white-space: pre-wrap; }
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -1457,7 +1457,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/rewind button white.png</normaloff>:/icons/icons/rewind button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1474,7 +1474,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/forward button white.png</normaloff>:/icons/icons/forward button white.png</iconset>
        </property>
        <property name="iconSize">
@@ -1494,7 +1494,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/stop 2.png</normaloff>:/icons/icons/stop 2.png</iconset>
        </property>
        <property name="iconSize">
@@ -1520,7 +1520,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/play-pause-resume.png</normaloff>:/icons/icons/play-pause-resume.png</iconset>
        </property>
        <property name="iconSize">
@@ -1606,7 +1606,7 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>320</x>
       <y>250</y>
-      <width>631</width>
+      <width>638</width>
       <height>411</height>
      </rect>
     </property>
@@ -1648,7 +1648,7 @@ color: rgb(255, 255, 255);</string>
           <string>Add</string>
          </property>
          <property name="icon">
-          <iconset resource="resource.qrc">
+          <iconset>
            <normaloff>:/icons/icons/music 2.png</normaloff>:/icons/icons/music 2.png</iconset>
          </property>
         </widget>
@@ -1659,7 +1659,7 @@ color: rgb(255, 255, 255);</string>
           <string>Remove</string>
          </property>
          <property name="icon">
-          <iconset resource="resource.qrc">
+          <iconset>
            <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
          </property>
         </widget>
@@ -1876,7 +1876,7 @@ border-color: rgb(110, 53, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1280</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuEdit">
@@ -1987,7 +1987,7 @@ border-color: rgb(110, 53, 255);</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/new doc.png</normaloff>:/icons/icons/new doc.png</iconset>
    </property>
    <property name="text">
@@ -1996,7 +1996,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/open alt.png</normaloff>:/icons/icons/open alt.png</iconset>
    </property>
    <property name="text">
@@ -2005,7 +2005,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/archive.png</normaloff>:/icons/icons/archive.png</iconset>
    </property>
    <property name="text">
@@ -2024,7 +2024,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
   <action name="actionQuit">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/icons/icons/remove.png</normaloff>:/icons/icons/remove.png</iconset>
    </property>
    <property name="text">
@@ -2033,7 +2033,7 @@ border-color: rgb(110, 53, 255);</string>
   </action>
  </widget>
  <resources>
-  <include location="resource.qrc"/>
+  <include location="Resource.qrc"/>
  </resources>
  <connections/>
 </ui>
